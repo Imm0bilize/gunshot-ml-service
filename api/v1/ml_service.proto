@@ -1,0 +1,17 @@
+syntax="proto3";
+
+option go_package = "github.com/Imm0bilize/pkg/mlservice/api/proto/v1";
+
+service ModelService{
+  rpc Predict(stream PredictRequest) returns (stream PredictResponse);
+}
+
+message PredictRequest{
+  repeated string ids=1;
+  repeated bytes payloads=2;
+}
+
+message PredictResponse{
+  repeated string ids=1;
+  repeated float prob=2;
+}
