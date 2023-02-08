@@ -1,0 +1,2 @@
+class UnknownModelName(RuntimeError):
+    pass
