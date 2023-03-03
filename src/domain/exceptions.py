@@ -1,2 +1,0 @@
-class UnknownModelName(RuntimeError):
-    pass
